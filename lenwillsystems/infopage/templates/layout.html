@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block title %}Lenwill Systems - Elevators & Escalators{% endblock %}</title>
+    
+    <meta name="description" content="{% block meta_description %}Lenwill Systems provides elevator, escalator, and transport system services including maintenance, installation, parts, and more.{% endblock %}">
+    <meta name="keywords" content="Elevator services, Escalator services, Lift Maintenance, Elevator installation, Elevator spare parts, Travelator, Roller Conveyors, Hoist installation, Car parking systems">
+    <meta name="author" content="Lenwill Systems">
+
+    <meta property="og:title" content="{% block og_title %}Lenwill Systems - Vertical Transport Experts{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Expert installation, maintenance, and supply of elevator systems and more.{% endblock %}">
+    <meta property="og:image" content="{% static 'images/elevator-bg.jpg' %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lenwillsystems.com/">
+
+    <link rel="canonical" href="https://www.lenwillsystems.com/">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static '/styles.css' %}">
+</head>
+<body class="custom-background">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <p>&copy; 2025 @Lenwill Systems. All rights reserved.</p>
+    </footer>
+</body>
+</html>

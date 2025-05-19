@@ -1,5 +1,5 @@
 {% extends 'layout.html' %}
-
+{% load static %}
 {% block title %}Lenwill Systems | Elevator and Escalator Services{% endblock %}
 {% block meta_description %}Lenwill Systems offers expert elevator and escalator maintenance, installation, spare parts, and more. Reliable solutions for every vertical transport need.{% endblock %}
 {% block og_title %}Lenwill Systems | Expert Lift Services{% endblock %}
@@ -16,11 +16,36 @@
 <section id="services">
     <h2>Our Services</h2>
     <div class="cards">
-        <a href="{% url 'services' %}"><div class="card"><h3>Maintenance</h3><p>Reliable upkeep for elevators and more.</p></div></a>
-        <a href="{% url 'services' %}"><div class="card"><h3>Modification</h3><p>Upgrade your lift systems easily.</p></div></a>
-        <a href="{% url 'services' %}"><div class="card"><h3>Installation</h3><p>Top-tier system installs.</p></div></a>
-        <a href="{% url 'services' %}"><div class="card"><h3>Spare Parts</h3><p>Get authentic replacement parts.</p></div></a>
+        <a href="{% url 'maintenance' %}">
+            <div class="card">
+                <img src="{% static 'images/maintenance.jpg' %}" alt="Maintenance">
+                <h3>Maintenance</h3>
+                <p>Reliable upkeep for elevators and more.</p>
+            </div>
+        </a>
+        <a href="{% url 'modification' %}">
+            <div class="card">
+                <img src="{% static 'images/modification.jpg' %}" alt="Modification">
+                <h3>Modification</h3>
+                <p>Upgrade your lift systems easily.</p>
+            </div>
+        </a>
+        <a href="{% url 'installation' %}">
+            <div class="card">
+                <img src="{% static 'images/installation.jpg' %}" alt="Installation">
+                <h3>Installation</h3>
+                <p>Top-tier system installations.</p>
+            </div>
+        </a>
+        <a href="{% url 'spareparts' %}">
+            <div class="card">
+                <img src="{% static 'images/spare-parts.jpg' %}" alt="Spare Parts">
+                <h3>Spare Parts</h3>
+                <p>Get authentic part replacements for your equipments</p>
+            </div>
+        </a>
     </div>
 </section>
+
 
 {% endblock %}

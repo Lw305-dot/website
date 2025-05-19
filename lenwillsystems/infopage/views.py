@@ -27,3 +27,18 @@ def contact(request):
         return redirect('home')  
 
     return render(request, 'contact.html')
+
+def maintenance(request):
+    return render(request,'maintenance.html')
+
+def Modification(request):
+    return render(request,'modification.html')
+
+def spareparts(request):
+    return render(request,'spareparts.html')
+
+def installation(request):
+    return render(request,'installation.html')
+
+def materialhandling(request):
+    return render(request,'materialhandling.html')

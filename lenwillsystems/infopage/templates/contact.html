@@ -14,9 +14,5 @@
         <button type="submit">Send</button>
     </form>
 </section>
-{% if messages %}
-    {% for message in messages %}
-        <div id="django-message" data-message="{{ message }}"></div>
-    {% endfor %}
-{% endif %}
+
 {% endblock %}
